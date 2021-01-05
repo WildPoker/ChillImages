@@ -9,6 +9,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
     boxShadow: "0px 0px 0px",
   },
+  Appbar2: {
+    backgroundColor: "#7c9473",
+    boxShadow: "0px 4px 2px -2px gray",
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -18,12 +22,17 @@ const useStyles = makeStyles((theme) => ({
   },
   Button: {
     color: "#e8eae6",
-    fontSize: "20px",
-    margin: "0 20px 0 20px",
+    fontSize: "3vh",
+    margin: "0 3vh 0 3vh",
+  },
+  Button2: {
+    color: "#222831",
+    fontSize: "3vh",
+    margin: "0 3vh 0 3vh",
   },
   HomeText: {
     fontFamily: "Redressed, cursive",
-    fontSize: "160px",
+    fontSize: "10vw",
     textAlign: "center",
     color: "white",
     textShadow: "5px 5px #7c9473",
@@ -36,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   about: {
     fontSize: "25px",
+    marginBottom: "200px",
     fontFamily: "Roboto, sans-serif",
   },
 }));

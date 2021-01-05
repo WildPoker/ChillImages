@@ -1,20 +1,28 @@
-import { Container, Typography } from "@material-ui/core";
+import { Container, Typography, Grow } from "@material-ui/core";
 import useStyles from "./styles";
 import Appbar from "./Appbar";
 import About from "./About";
 import GridImages from "./GridImages";
+import ImageTabs from "./ImageTabs";
+import ImageGallery from "./ImageGallery";
+import Bottom from "./Bottom";
 import CircleLoader from "react-spinners/CircleLoader";
 import React, { useState, useEffect } from "react";
 function App() {
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
+  const [value, setValue] = useState(1);
 
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
+
+  function changeValue(newValue) {
+    setValue(newValue);
+  }
   return (
     <div className="App">
       {loading ? (
@@ -31,15 +39,19 @@ function App() {
                 style={{
                   backgroundColor: "transparent",
                   height: "70vh",
-                  marginTop: "100px",
                 }}
               >
-                <p className={classes.HomeText}>Chill Images</p>
+                <Grow in={true}>
+                  <p className={classes.HomeText}>Chill Images</p>
+                </Grow>
               </Typography>
             </Container>
           </div>
+
           <About />
-          <GridImages />
+          <ImageTabs newValue={changeValue} />
+          <div>{value ? <GridImages /> : <ImageGallery />}</div>
+          <Bottom />
         </div>
       )}
     </div>

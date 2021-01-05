@@ -21,7 +21,7 @@ body {
 
 .Main {
   min-height: 250vh;
-  background-color: #e8eae6;
+  background-color: #ffffff;
 }
 
 .Home {
@@ -54,13 +54,26 @@ body {
   display: inline-block;
 }
 
+.makeStyles-root-40 {
+  background-color: transparent !important;
+}
+
+.awssld__wrapper {
+  border: solid #374045 !important;
+  border-radius: 5px;
+}
+
+.awssld__wrapper img {
+  border-radius: 5px;
+}
+
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #374045;
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {

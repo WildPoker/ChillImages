@@ -23,6 +23,39 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "8px",
     verticalAlign: "middle",
   },
+  Container: {
+    marginTop: "50px",
+    backgroundColor: "transparent",
+  },
+  Typography: {
+    backgroundColor: "transparent",
+    height: "100%",
+  },
+  Carousel: {
+    backgroundColor: "transparent !important",
+  },
+  imgGalleryRoot: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    width: "100%",
+    height: "100%",
+  },
+  gridTile: {
+    cursor: "pointer",
+  },
+  paper: {
+    position: "absolute",
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
 }));
 
 export default useStyles;

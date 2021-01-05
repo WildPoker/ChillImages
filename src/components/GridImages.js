@@ -1,13 +1,6 @@
 import React from "react";
 import useStyles from "./GridStyles";
-import {
-  GridList,
-  GridListTile,
-  GridListTileBar,
-  ListSubheader,
-  IconButton,
-} from "@material-ui/core";
-import InfoIcon from "@material-ui/icons/Info";
+import { Typography, Container } from "@material-ui/core";
 import imagesData from "../images/images";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
@@ -20,27 +13,29 @@ function GridImages() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {/* <GridList cellHeight={300} className={classes.gridList} cols={2}>
-        {imagesData.map((tile) => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
-          </GridListTile>
-        ))}
-      </GridList> */}
-
-      <AutoplaySlider
-        play={true}
-        cancelOnInteraction={false} // should stop playing on user interaction
-        interval={3000}
-        animation="openAnimation"
-        cssModule={AwesomeSliderStyles}
-        mobileTouch={true}
-        infinite={true}
-      >
-        {imagesData.map((tile) => (
-          <div data-src={tile.img} />
-        ))}
-      </AutoplaySlider>
+      <Container maxWidth="lg" className={classes.Container}>
+        <Typography component="div" className={classes.Typography}>
+          <AutoplaySlider
+            className={classes.Carousel}
+            play={true}
+            cancelOnInteraction={false} // should stop playing on user interaction
+            interval={3000}
+            animation="openAnimation"
+            cssModule={AwesomeSliderStyles}
+            mobileTouch={true}
+            infinite={true}
+            style={{
+              height: "90%",
+              width: "100%",
+              backgroundColor: "transparent",
+            }}
+          >
+            {imagesData.map((tile) => (
+              <div key={tile.id} data-src={tile.img} />
+            ))}
+          </AutoplaySlider>
+        </Typography>
+      </Container>
     </div>
   );
 }

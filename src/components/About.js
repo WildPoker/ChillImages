@@ -5,7 +5,7 @@ import useStyles from "./styles";
 function About() {
   const classes = useStyles();
   return (
-    <div>
+    <div className="about">
       <Container maxWidth="md">
         <Typography component="div" className={classes.Typography}>
           <h1>About</h1>
@@ -41,17 +41,17 @@ const Underline = () => {
           margin: "auto",
           height: "2px",
           border: "none",
-          background: "#374045",
+          background: "#7c9473",
           width: "45%",
         }}
       />
-      <div style={{ marginTop: "20px" }}>
+      <div style={{ marginTop: "20px", marginBottom: "50px" }}>
         <hr
           style={{
             margin: "auto",
             height: "2px",
             border: "none",
-            background: "#374045",
+            background: "#7c9473",
             width: "30%",
           }}
         />
