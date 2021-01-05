@@ -1,22 +1,13 @@
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  Box,
-  IconButton,
-  Slide,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { AppBar, Toolbar, Button, Box, Slide } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import useStyles from "./styles";
-import { Link, animateScroll as scroll } from "react-scroll";
-import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import React, { useState } from "react";
 
 function Appbar() {
   const classes = useStyles();
   const [navbar, setNavbar] = useState(false);
   const [slide, setSlide] = useState(true);
-  const isChanged = useMediaQuery({ query: "(max-width: 880px)" });
 
   const changeBackground = () => {
     if (window.scrollY >= 800) {
