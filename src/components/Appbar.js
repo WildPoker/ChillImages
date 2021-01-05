@@ -1,8 +1,29 @@
 import { AppBar, Toolbar, Button, Box, Slide } from "@material-ui/core";
-import { useMediaQuery } from "react-responsive";
-import useStyles from "./styles";
 import { Link } from "react-scroll";
 import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  Appbar: {
+    backgroundColor: "transparent",
+    boxShadow: "0px 0px 0px",
+  },
+  Appbar2: {
+    backgroundColor: "#7c9473",
+    boxShadow: "0px 4px 2px -2px gray",
+  },
+
+  Button: {
+    color: "#e8eae6",
+    fontSize: "3vh",
+    margin: "0 3vh 0 3vh",
+  },
+  Button2: {
+    color: "#222831",
+    fontSize: "3vh",
+    margin: "0 3vh 0 3vh",
+  },
+}));
 
 function Appbar() {
   const classes = useStyles();
